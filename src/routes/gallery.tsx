@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHeader } from "@/components/site/Layout";
 import { ContactStrip, GallerySection } from "@/components/site/sections";
+import { InstitutionalSection } from "@/components/site/highlights";
 
 const title = "Our Work — Bus Body Gallery | Alfha Coach Builders Karur";
 const description =
@@ -31,6 +32,7 @@ function Gallery() {
         intro="Every photograph here is a body fabricated and finished at our Karur workshop — no catalogue renders, no stock photos."
       />
       <GallerySection full />
+      <InstitutionalSection />
       <ContactStrip />
     </Layout>
   );
