@@ -2,7 +2,16 @@ import logoAsset from "@/assets/logo.asset.json";
 import busBlue from "@/assets/bus-blue.asset.json";
 import busWhite from "@/assets/bus-white.asset.json";
 import busYellow from "@/assets/bus-yellow.asset.json";
-import coachNight from "@/assets/coach-night.asset.json";
+import instJacsiceExterior from "@/assets/inst-jacsice-exterior.asset.json";
+import instJacsiceInterior from "@/assets/inst-jacsice-interior.asset.json";
+import instNatureCabs from "@/assets/inst-nature-cabs.asset.json";
+import instRamcoDay from "@/assets/inst-ramco-day.asset.json";
+import instFleetThree from "@/assets/inst-fleet-three.asset.json";
+import instAlphaDusk from "@/assets/inst-alpha-dusk.asset.json";
+import instAlphaPair from "@/assets/inst-alpha-pair.asset.json";
+import instKavinaPair from "@/assets/inst-kavina-pair.asset.json";
+import instRamcoNight from "@/assets/inst-ramco-night.asset.json";
+import instInteriorBlue from "@/assets/inst-interior-blue.asset.json";
 
 export const site = {
   name: "Alfha Coach Builders",
