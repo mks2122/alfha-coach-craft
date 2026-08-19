@@ -8,7 +8,7 @@ import {
   Users,
   School,
 } from "lucide-react";
-import { gallery } from "@/lib/site";
+import { institutionalGallery } from "@/lib/site";
 import { CtaRow, SectionHead } from "./sections";
 
 const institutional = [
