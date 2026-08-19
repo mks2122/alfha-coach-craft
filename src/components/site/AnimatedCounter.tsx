@@ -38,7 +38,7 @@ export function AnimatedCounter({
       const tick = (now: number) => {
         const p = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - p, 3);
-        setValue(Math.max(1, Math.round(eased * to)));
+        setValue(Math.round(eased * to));
         if (p < 1) {
           raf = requestAnimationFrame(tick);
         } else {
