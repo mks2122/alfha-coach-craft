@@ -4,7 +4,7 @@ import { ContactStrip, GallerySection } from "@/components/site/sections";
 
 const title = "Our Work — Bus Body Gallery | Alfha Coach Builders Karur";
 const description =
-  "Photos of bus bodies built by Alfha Coach Builders in Karur: school buses, staff buses, long-haul coaches and luxury sleeper coaches.";
+  "Photos of bus bodies built by Alfha Coach Builders in Karur: school buses, staff buses, long-haul coaches and institutional buses.";
 
 export const Route = createFileRoute("/gallery")({
   component: Gallery,
