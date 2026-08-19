@@ -16,6 +16,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { gallery, heroImage, site } from "@/lib/site";
+import { AnimatedCounter } from "./AnimatedCounter";
 
 export function CtaRow({ compact = false }: { compact?: boolean }) {
   const base =
@@ -69,7 +70,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 hero-scrim" />
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-36">
-        <p className="eyebrow">Karur · Tamil Nadu · Since Two Decades of Craft</p>
+        <p className="eyebrow">Karur · Tamil Nadu · Since Four Decades of Craft</p>
         <h1 className="mt-4 max-w-3xl text-5xl uppercase sm:text-6xl md:text-7xl">
           Bus Body Builders in Karur Who Build Coaches That Last
         </h1>
@@ -83,12 +84,12 @@ export function Hero() {
         </div>
         <dl className="mt-12 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-sm border border-border/70 bg-border/70 sm:grid-cols-4">
           {[
-            ["500+", "Bodies Delivered"], 
-            ["20+", "Years On The Floor"],
+            [<AnimatedCounter key="c" to={1000} suffix="+" />, "Bus Bodies Built"],
+            ["40+", "Years of Experience"],
             ["All", "Chassis Makes"],
             ["100%", "In-House Build"],
           ].map(([value, label]) => (
-            <div key={label} className="bg-background/85 px-4 py-5">
+            <div key={String(label)} className="bg-background/85 px-4 py-5">
               <dt className="font-display text-3xl text-primary">{value}</dt>
               <dd className="mt-1 text-[0.7rem] font-semibold uppercase tracking-widest text-muted-foreground">
                 {label}
@@ -293,7 +294,7 @@ const reasons = [
   {
     icon: Bus,
     title: "Karur Craftsmanship",
-    body: "Two decades of coach building experience in Tamil Nadu's coach building hub, with fleets still running our earliest bodies.",
+    body: "Four decades of coach building experience in Tamil Nadu's coach building hub, with fleets still running our earliest bodies.",
   },
 ] as const;
 

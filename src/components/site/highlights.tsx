@@ -8,7 +8,7 @@ import {
   Users,
   School,
 } from "lucide-react";
-import { gallery, site } from "@/lib/site";
+import { gallery } from "@/lib/site";
 import { CtaRow, SectionHead } from "./sections";
 
 const institutional = [
@@ -108,7 +108,7 @@ export function CertificationSection() {
           {[
             { icon: ShieldCheck, title: "Safety", body: "AIS 153 certified body construction." },
             { icon: Hammer, title: "Strength", body: "Heavy-gauge steel skeleton, rust-proofed." },
-            { icon: Award, title: "Trust", body: `Karur-built and fleet-proven since ${site.city ? "decades" : ""}`.trim() },
+            { icon: Award, title: "Trust", body: "Karur-built, fleet-proven for four decades." },
           ].map((c) => (
             <div key={c.title} className="bg-surface px-6 py-7">
               <c.icon className="h-7 w-7 text-primary" aria-hidden="true" />
