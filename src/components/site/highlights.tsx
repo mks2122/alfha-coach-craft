@@ -20,7 +20,7 @@ const institutional = [
 ] as const;
 
 export function InstitutionalSection() {
-  const [school, staff, coach] = [gallery[0], gallery[1], gallery[2]];
+  const [hero, ...rest] = institutionalGallery;
   return (
     <section className="border-y border-border bg-surface">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
@@ -29,26 +29,26 @@ export function InstitutionalSection() {
           title="Buses Built For Schools, Colleges & Organizations"
           intro="Purpose-built institutional bodies for educational campuses, factories and organizations — safe entry steps, guarded windows, durable interiors and layouts planned around daily passenger loads."
         />
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+        <div className="mt-12 grid gap-6">
           <figure
             className="group overflow-hidden rounded-sm border border-border bg-background"
             style={{ boxShadow: "var(--shadow-panel)" }}
           >
             <img
-              src={school.src}
-              alt={school.alt}
+              src={hero.src}
+              alt={hero.alt}
               loading="lazy"
               decoding="async"
-              className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-[27rem]"
+              className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-[30rem]"
             />
             <figcaption className="border-t border-border px-5 py-4 font-display text-xl uppercase">
-              School & College Buses
+              {hero.title}
             </figcaption>
           </figure>
-          <div className="grid gap-6">
-            {[staff, coach].map((g, i) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {rest.map((g) => (
               <figure
-                key={g.src}
+                key={g.title}
                 className="group overflow-hidden rounded-sm border border-border bg-background"
                 style={{ boxShadow: "var(--shadow-panel)" }}
               >
@@ -57,10 +57,10 @@ export function InstitutionalSection() {
                   alt={g.alt}
                   loading="lazy"
                   decoding="async"
-                  className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-52"
+                  className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-56"
                 />
                 <figcaption className="border-t border-border px-5 py-3 font-display text-lg uppercase">
-                  {i === 0 ? "Staff & Factory Buses" : "Institutional Coaches"}
+                  {g.title}
                 </figcaption>
               </figure>
             ))}
