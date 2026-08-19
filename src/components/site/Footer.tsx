@@ -19,7 +19,7 @@ export function Footer() {
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Bus body builders and coach builders in Karur, Tamil Nadu. Custom bus body building,
             fabrication, exterior design and full customisation for school buses, staff buses,
-            tourist coaches and luxury sleepers.
+            tourist coaches and institutional fleets.
           </p>
         </div>
 
