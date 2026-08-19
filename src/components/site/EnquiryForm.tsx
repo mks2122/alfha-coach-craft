@@ -6,7 +6,7 @@ const requirements = [
   "School Bus Body",
   "Staff / Factory Bus",
   "Tourist Coach",
-  "Luxury Sleeper Coach",
+  "College / Institution Bus",
   "Refurbishment / Re-paint",
   "Fabrication Work",
 ] as const;
