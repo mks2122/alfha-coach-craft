@@ -68,7 +68,7 @@ export function AnimatedCounter({
 
   return (
     <span ref={ref} className={className} aria-label={`${to}${suffix}`}>
-      <span className="tabular-nums">{value.toLocaleString("en-IN")}</span>
+      <span className="tabular-nums">{value}</span>
       <span
         className="inline-block transition-opacity duration-500"
         style={{ opacity: done ? 1 : 0 }}
