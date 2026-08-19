@@ -4,7 +4,7 @@ import { AboutSection, ContactStrip, ProcessSection, WhySection } from "@/compon
 
 const title = "About Alfha Coach Builders | Coach Builders in Karur";
 const description =
-  "Family-run coach builders in Karur, Tamil Nadu with 20+ years of bus body building experience across Ashok Leyland, Tata, Eicher and BharatBenz chassis.";
+  "Family-run coach builders in Karur, Tamil Nadu with 40+ years of bus body building experience across Ashok Leyland, Tata, Eicher and BharatBenz chassis.";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -28,7 +28,7 @@ function About() {
       <PageHeader
         eyebrow="About Us"
         title="Coach Builders In Karur, Tamil Nadu"
-        intro="Alfha Coach Bus Body Builders has been fabricating bus bodies in Karur for over two decades — school buses for local institutions, staff buses for mills and factories, and tourist coaches running across South India."
+        intro="Alfha Coach Bus Body Builders has been fabricating bus bodies in Karur for over four decades — school buses for local institutions, staff buses for mills and factories, and tourist coaches running across South India."
       />
       <AboutSection />
       <WhySection />

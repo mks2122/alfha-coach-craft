@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 const title = "Contact Alfha Coach Builders, Karur | Get a Bus Body Quote";
 const description =
-  "Call or WhatsApp +91 86677 56019 for a bus body building quote in Karur, Tamil Nadu. Send your chassis and seating requirement through our enquiry form.";
+  "Call or WhatsApp +91 98429 88407 / +91 86677 56019 for a bus body building quote in Karur, Tamil Nadu. Send your chassis and seating requirement through our enquiry form.";
 
 export const Route = createFileRoute("/contact")({
   component: Contact,
@@ -25,8 +25,14 @@ export const Route = createFileRoute("/contact")({
 });
 
 const links = [
-  { href: `tel:${site.phone}`, icon: Phone, label: "Call Us", value: site.phoneDisplay },
-  { href: site.whatsapp, icon: MessageCircle, label: "WhatsApp", value: "Chat with our team" },
+  { href: `tel:${site.phone}`, icon: Phone, label: "Call Now", value: site.phoneDisplay },
+  { href: `tel:${site.phoneAlt}`, icon: Phone, label: "Call Now", value: site.phoneAltDisplay },
+  {
+    href: site.whatsapp,
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: `Chat on ${site.phoneAltDisplay}`,
+  },
   { href: site.maps, icon: MapPin, label: "Workshop", value: "Karur, Tamil Nadu — get directions" },
   {
     href: site.instagram,
@@ -48,7 +54,7 @@ function Contact() {
         <div className="space-y-4">
           {links.map((l) => (
             <a
-              key={l.label}
+              key={`${l.label}-${l.value}`}
               href={l.href}
               {...(l.href.startsWith("http") ? { target: "_blank", rel: "noreferrer noopener" } : {})}
               className="flex items-center gap-4 rounded-sm border border-border bg-surface px-5 py-5 transition-colors hover:border-primary"

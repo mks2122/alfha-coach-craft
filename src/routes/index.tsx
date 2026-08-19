@@ -9,6 +9,11 @@ import {
   ServicesSection,
   WhySection,
 } from "@/components/site/sections";
+import {
+  CertificationSection,
+  InstitutionalSection,
+  UspSection,
+} from "@/components/site/highlights";
 import { site } from "@/lib/site";
 
 const title = "Bus Body Builders in Karur | Alfha Coach Bus Body Builders";
@@ -43,7 +48,7 @@ export const Route = createFileRoute("/")({
           name: site.legalName,
           alternateName: site.name,
           description,
-          telephone: site.phoneDisplay,
+          telephone: [site.phoneDisplay, site.phoneAltDisplay],
           url: "/",
           image: "/favicon.ico",
           address: {
@@ -75,6 +80,9 @@ function Home() {
       <Hero />
       <AboutSection />
       <ServicesSection />
+      <CertificationSection />
+      <UspSection />
+      <InstitutionalSection />
       <GallerySection />
       <WhySection />
       <ProcessSection />
