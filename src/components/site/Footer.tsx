@@ -51,6 +51,14 @@ export function Footer() {
             </li>
             <li>
               <a
+                href={`tel:${site.phoneAlt}`}
+                className="inline-flex items-center gap-2 hover:text-primary"
+              >
+                <Phone className="h-4 w-4 shrink-0" aria-hidden="true" /> {site.phoneAltDisplay}
+              </a>
+            </li>
+            <li>
+              <a
                 href={site.maps}
                 target="_blank"
                 rel="noreferrer noopener"
