@@ -32,6 +32,7 @@ function Gallery() {
         intro="Every photograph here is a body fabricated and finished at our Karur workshop — no catalogue renders, no stock photos."
       />
       <GallerySection full />
+      <InstitutionalSection />
       <ContactStrip />
     </Layout>
   );
