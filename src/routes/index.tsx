@@ -14,7 +14,7 @@ import {
   InstitutionalSection,
   UspSection,
 } from "@/components/site/highlights";
-import { SITE_URL, heroImage, site } from "@/lib/site";
+import { SITE_URL, heroImage, logo, site } from "@/lib/site";
 
 const title = "Bus Body Builders in Karur | Alfha Coach Bus Body Builders";
 const description =
