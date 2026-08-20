@@ -46,13 +46,14 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://alfhacoachbuilders.com/#localbusiness",
+          "@id": `${SITE_URL}/#localbusiness`,
           name: site.legalName,
           alternateName: site.name,
           description,
-          telephone: [site.phoneDisplay, site.phoneAltDisplay],
-          url: "/",
-          image: "/favicon.ico",
+          telephone: [site.phone, site.phoneAlt],
+          url: `${SITE_URL}/`,
+          image: `${SITE_URL}${heroImage.src}`,
+          logo: `${SITE_URL}${logo}`,
           address: {
             "@type": "PostalAddress",
             addressLocality: "Karur",
