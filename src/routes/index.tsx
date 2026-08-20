@@ -14,7 +14,8 @@ import {
   InstitutionalSection,
   UspSection,
 } from "@/components/site/highlights";
-import { site } from "@/lib/site";
+import { LocalSeoSection } from "@/components/site/LocalSeoSection";
+import { SITE_URL, heroImage, logo, site } from "@/lib/site";
 
 const title = "Bus Body Builders in Karur | Alfha Coach Bus Body Builders";
 const description =
@@ -34,23 +35,26 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: `${SITE_URL}${heroImage.src}` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `${SITE_URL}${heroImage.src}` },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://alfhacoachbuilders.com/#localbusiness",
+          "@id": `${SITE_URL}/#localbusiness`,
           name: site.legalName,
           alternateName: site.name,
           description,
-          telephone: [site.phoneDisplay, site.phoneAltDisplay],
-          url: "/",
-          image: "/favicon.ico",
+          telephone: [site.phone, site.phoneAlt],
+          url: `${SITE_URL}/`,
+          image: `${SITE_URL}${heroImage.src}`,
+          logo: `${SITE_URL}${logo}`,
           address: {
             "@type": "PostalAddress",
             addressLocality: "Karur",
@@ -86,6 +90,7 @@ function Home() {
       <GallerySection />
       <WhySection />
       <ProcessSection />
+      <LocalSeoSection />
       <ContactStrip />
     </Layout>
   );
