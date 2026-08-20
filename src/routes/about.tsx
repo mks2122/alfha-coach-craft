@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SITE_URL, heroImage } from "@/lib/site";
 import { Layout, PageHeader } from "@/components/site/Layout";
 import { AboutSection, ContactStrip, ProcessSection, WhySection } from "@/components/site/sections";
 
@@ -15,10 +16,12 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: `${SITE_URL}/about` },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: `${SITE_URL}${heroImage.src}` },
+      { name: "twitter:image", content: `${SITE_URL}${heroImage.src}` },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
 });
 

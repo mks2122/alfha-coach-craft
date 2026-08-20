@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Layout, PageHeader } from "@/components/site/Layout";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
-import { site } from "@/lib/site";
+import { SITE_URL, heroImage, site } from "@/lib/site";
 
 const title = "Contact Alfha Coach Builders, Karur | Get a Bus Body Quote";
 const description =
@@ -17,10 +17,12 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: `${SITE_URL}/contact` },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: `${SITE_URL}${heroImage.src}` },
+      { name: "twitter:image", content: `${SITE_URL}${heroImage.src}` },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/contact` }],
   }),
 });
 
