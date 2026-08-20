@@ -13,8 +13,11 @@ import instKavinaPair from "@/assets/inst-kavina-pair.asset.json";
 import instRamcoNight from "@/assets/inst-ramco-night.asset.json";
 import instInteriorBlue from "@/assets/inst-interior-blue.asset.json";
 
+export const SITE_URL = "https://alfha-coach-craft.lovable.app";
+
 export const site = {
   name: "Alfha Coach Builders",
+  url: SITE_URL,
   legalName: "Alfha Coach Bus Body Builders",
   city: "Karur",
   state: "Tamil Nadu",
