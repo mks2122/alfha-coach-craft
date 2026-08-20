@@ -14,6 +14,7 @@ import {
   InstitutionalSection,
   UspSection,
 } from "@/components/site/highlights";
+import { LocalSeoSection } from "@/components/site/LocalSeoSection";
 import { SITE_URL, heroImage, logo, site } from "@/lib/site";
 
 const title = "Bus Body Builders in Karur | Alfha Coach Bus Body Builders";
@@ -89,6 +90,7 @@ function Home() {
       <GallerySection />
       <WhySection />
       <ProcessSection />
+      <LocalSeoSection />
       <ContactStrip />
     </Layout>
   );
