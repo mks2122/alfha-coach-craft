@@ -35,13 +35,13 @@ export function Header() {
         </Link>
 
         <div className="flex items-center gap-2">
-          <nav className="hidden items-center gap-1 lg:flex">
+          <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 activeOptions={{ exact: item.to === "/" }}
-                className="rounded-sm px-3 py-2 text-sm font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground [&.active]:text-primary"
+                className="rounded-sm px-3 py-2.5 text-sm font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground [&.active]:text-primary"
               >
                 {item.label}
               </Link>
@@ -49,7 +49,7 @@ export function Header() {
           </nav>
           <a
             href={`tel:${site.phone}`}
-            className="hidden items-center gap-2 rounded-sm accent-bar px-4 py-2.5 text-sm font-bold uppercase tracking-wider text-primary-foreground sm:inline-flex"
+            className="hidden min-h-11 items-center gap-2 rounded-sm accent-bar px-4 py-2.5 text-sm font-bold uppercase tracking-wider text-primary-foreground sm:inline-flex"
             style={{ boxShadow: "var(--shadow-accent)" }}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
@@ -58,6 +58,8 @@ export function Header() {
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-border text-foreground lg:hidden"
           >
@@ -67,19 +69,24 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav className="border-t border-border bg-surface px-4 py-3 lg:hidden">
+        <nav
+          id="mobile-nav"
+          aria-label="Mobile"
+          className="border-t border-border bg-surface px-4 py-3 lg:hidden"
+        >
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
-              className="block border-b border-border/60 py-3 font-display text-2xl text-foreground last:border-0 [&.active]:text-primary"
+              className="block border-b border-border/60 py-3.5 font-display text-2xl text-foreground last:border-0 [&.active]:text-primary"
             >
               {item.label}
             </Link>
           ))}
         </nav>
       ) : null}
+
     </header>
   );
 }
