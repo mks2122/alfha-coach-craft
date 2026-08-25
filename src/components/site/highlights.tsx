@@ -23,7 +23,7 @@ export function InstitutionalSection() {
   const [hero, ...rest] = institutionalGallery;
   return (
     <section className="border-y border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <SectionHead
           eyebrow="Institutional Buses"
           title="Buses Built For Schools, Colleges & Organizations"
@@ -39,6 +39,8 @@ export function InstitutionalSection() {
               alt={hero.alt}
               loading="lazy"
               decoding="async"
+              width={1600}
+              height={900}
               className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-[30rem]"
             />
             <figcaption className="border-t border-border px-5 py-4 font-display text-xl uppercase">
@@ -57,6 +59,8 @@ export function InstitutionalSection() {
                   alt={g.alt}
                   loading="lazy"
                   decoding="async"
+                  width={800}
+                  height={600}
                   className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-56"
                 />
                 <figcaption className="border-t border-border px-5 py-3 font-display text-lg uppercase">
@@ -82,7 +86,7 @@ export function InstitutionalSection() {
 export function CertificationSection() {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-[1fr_0.9fr] md:items-center">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-[1fr_0.9fr] md:items-center">
         <div>
           <p className="eyebrow">Safety · Strength · Trust</p>
           <div className="mt-5 inline-flex items-center gap-3 rounded-sm border border-primary/60 bg-primary/10 px-4 py-2">
@@ -132,7 +136,7 @@ const usps = [
 export function UspSection() {
   return (
     <section className="border-b border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <SectionHead
           eyebrow="School, College & Staff Buses"
           title="Built To Perfection"

@@ -99,6 +99,13 @@
     letter-spacing: 0.02em;
     line-height: 0.95;
   }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
 }
 
 @utility surface-panel {
