@@ -122,7 +122,7 @@ export function SectionHead({
 
 export function AboutSection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
       <div className="grid gap-12 md:grid-cols-[1.05fr_1fr] md:items-center">
         <div>
           <SectionHead
@@ -197,7 +197,7 @@ const services = [
 export function ServicesSection() {
   return (
     <section className="border-y border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <SectionHead
           eyebrow="Our Services"
           title="Coach Building, Fabrication & Customisation"
@@ -219,7 +219,7 @@ export function ServicesSection() {
 
 export function GallerySection({ full = false }: { full?: boolean }) {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
       <SectionHead
         eyebrow="Our Work"
         title="Bodies Built In Our Karur Shed"
@@ -301,7 +301,7 @@ const reasons = [
 export function WhySection() {
   return (
     <section className="border-y border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <SectionHead eyebrow="Why Choose Us" title="Why Fleet Owners Keep Coming Back To Alfha" />
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((r) => (
@@ -327,7 +327,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
       <SectionHead
         eyebrow="Our Process"
         title="From Bare Chassis To Road Ready"
