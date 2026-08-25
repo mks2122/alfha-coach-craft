@@ -20,10 +20,10 @@ import { AnimatedCounter } from "./AnimatedCounter";
 
 export function CtaRow({ compact = false }: { compact?: boolean }) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-sm px-5 font-bold uppercase tracking-wider transition-transform hover:-translate-y-0.5";
+    "inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm px-5 font-bold uppercase tracking-wider transition-transform hover:-translate-y-0.5 sm:flex-none";
   const size = compact ? "py-2.5 text-xs" : "py-3.5 text-sm";
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-2.5 sm:gap-3">
       <a
         href={site.whatsapp}
         target="_blank"
@@ -67,10 +67,14 @@ export function Hero() {
         alt={heroImage.alt}
         className="absolute inset-0 h-full w-full object-cover object-center"
         loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        width={1600}
+        height={900}
       />
       <div className="absolute inset-0 hero-scrim" />
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-36">
-        <p className="eyebrow">Karur · Tamil Nadu · Since Four Decades of Craft</p>
+        <p className="eyebrow">Karur · Tamil Nadu · Four Decades of Craft</p>
         <h1 className="mt-4 max-w-3xl text-5xl uppercase sm:text-6xl md:text-7xl">
           Bus Body Builders in Karur Who Build Coaches That Last
         </h1>
@@ -151,6 +155,9 @@ export function AboutSection() {
               src={g.src}
               alt={g.alt}
               loading="lazy"
+              decoding="async"
+              width={800}
+              height={600}
               className="h-56 w-full rounded-sm object-cover sm:h-72"
               style={{ boxShadow: "var(--shadow-panel)" }}
             />
@@ -238,11 +245,14 @@ export function GallerySection({ full = false }: { full?: boolean }) {
               src={g.src}
               alt={g.alt}
               loading="lazy"
+              decoding="async"
+              width={1200}
+              height={800}
               className={`w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] ${
                 full && i === 0 ? "h-64 sm:h-[26rem]" : "h-60 sm:h-72"
               }`}
             />
-            <figcaption className="flex items-baseline justify-between gap-4 border-t border-border px-5 py-4">
+            <figcaption className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-border px-5 py-4">
               <span className="font-display text-xl uppercase">{g.title}</span>
               <span className="text-[0.7rem] font-semibold uppercase tracking-widest text-muted-foreground">
                 {g.meta}

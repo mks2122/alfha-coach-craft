@@ -13,6 +13,8 @@ export function Footer() {
               alt="Alfha Coach Builders logo"
               className="h-12 w-12 rounded-sm bg-foreground object-contain p-1"
               loading="lazy"
+              width={48}
+              height={48}
             />
             <span className="font-display text-2xl">Alfha Coach Builders</span>
           </div>
@@ -25,7 +27,7 @@ export function Footer() {
 
         <div>
           <h3 className="font-display text-xl">Explore</h3>
-          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+          <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
             {[
               { to: "/about", label: "About Us" },
               { to: "/services", label: "Services" },
@@ -33,7 +35,7 @@ export function Footer() {
               { to: "/contact", label: "Contact & Enquiry" },
             ].map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="transition-colors hover:text-primary">
+                <Link to={l.to} className="inline-block py-1.5 transition-colors hover:text-primary">
                   {l.label}
                 </Link>
               </li>
@@ -43,16 +45,16 @@ export function Footer() {
 
         <div>
           <h3 className="font-display text-xl">Reach Us</h3>
-          <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+          <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
             <li>
-              <a href={`tel:${site.phone}`} className="inline-flex items-center gap-2 hover:text-primary">
+              <a href={`tel:${site.phone}`} className="inline-flex items-center gap-2 py-1.5 hover:text-primary">
                 <Phone className="h-4 w-4 shrink-0" aria-hidden="true" /> {site.phoneDisplay}
               </a>
             </li>
             <li>
               <a
                 href={`tel:${site.phoneAlt}`}
-                className="inline-flex items-center gap-2 hover:text-primary"
+                className="inline-flex items-center gap-2 py-1.5 hover:text-primary"
               >
                 <Phone className="h-4 w-4 shrink-0" aria-hidden="true" /> {site.phoneAltDisplay}
               </a>
@@ -62,7 +64,7 @@ export function Footer() {
                 href={site.maps}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 hover:text-primary"
+                className="inline-flex items-center gap-2 py-1.5 hover:text-primary"
               >
                 <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" /> Karur, Tamil Nadu
               </a>
@@ -72,7 +74,7 @@ export function Footer() {
                 href={site.instagram}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 hover:text-primary"
+                className="inline-flex items-center gap-2 py-1.5 hover:text-primary"
               >
                 <Instagram className="h-4 w-4 shrink-0" aria-hidden="true" /> @alfha_coach_builders_karur
               </a>

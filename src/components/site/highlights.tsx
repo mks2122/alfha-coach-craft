@@ -39,6 +39,8 @@ export function InstitutionalSection() {
               alt={hero.alt}
               loading="lazy"
               decoding="async"
+              width={1600}
+              height={900}
               className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-[30rem]"
             />
             <figcaption className="border-t border-border px-5 py-4 font-display text-xl uppercase">
@@ -57,6 +59,8 @@ export function InstitutionalSection() {
                   alt={g.alt}
                   loading="lazy"
                   decoding="async"
+                  width={800}
+                  height={600}
                   className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:h-56"
                 />
                 <figcaption className="border-t border-border px-5 py-3 font-display text-lg uppercase">

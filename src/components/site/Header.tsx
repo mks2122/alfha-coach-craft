@@ -23,6 +23,8 @@ export function Header() {
             alt="Alfha Coach Builders logo — bus body builders in Karur, Tamil Nadu"
             className="h-11 w-11 shrink-0 rounded-sm bg-foreground object-contain p-1"
             loading="eager"
+            width={44}
+            height={44}
           />
           <span className="min-w-0">
             <span className="block truncate font-display text-xl leading-none sm:text-2xl">
