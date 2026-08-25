@@ -31,36 +31,40 @@ export function EnquiryForm() {
   }
 
   const field =
-    "mt-2 w-full rounded-sm border border-input bg-background px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary";
+    "mt-2 w-full rounded-sm border border-input bg-background px-3 py-3 text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary sm:py-2.5 sm:text-sm";
   const label = "block text-[0.7rem] font-bold uppercase tracking-widest text-muted-foreground";
 
   return (
     <form onSubmit={handleSubmit} className="surface-panel rounded-sm p-6 sm:p-8">
       <h2 className="text-2xl uppercase sm:text-3xl">Enquiry Form</h2>
-      <p className="mt-2 text-sm text-muted-foreground">
-        Fill this in and we will reply on WhatsApp with a quotation.
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        Fill this in and we will reply on WhatsApp with a quotation. Fields marked{" "}
+        <span className="text-primary">*</span> are required.
       </p>
 
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <div>
           <label className={label} htmlFor="name">
-            Your Name
+            Your Name <span className="text-primary">*</span>
           </label>
-          <input id="name" name="name" required className={field} placeholder="Full name" />
+          <input id="name" name="name" required autoComplete="name" className={field} placeholder="Full name" />
         </div>
         <div>
           <label className={label} htmlFor="phone">
-            Phone / WhatsApp
+            Phone / WhatsApp <span className="text-primary">*</span>
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
+            inputMode="tel"
+            autoComplete="tel"
             required
             className={field}
             placeholder="10-digit mobile number"
           />
         </div>
+
         <div>
           <label className={label} htmlFor="location">
             City / District
@@ -106,17 +110,18 @@ export function EnquiryForm() {
 
       <button
         type="submit"
-        className="mt-7 inline-flex items-center gap-2 rounded-sm accent-bar px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground"
+        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-sm accent-bar px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground sm:w-auto"
         style={{ boxShadow: "var(--shadow-accent)" }}
       >
         <Send className="h-4 w-4" aria-hidden="true" /> Send Enquiry
       </button>
 
-      {sent ? (
-        <p className="mt-4 text-sm text-whatsapp">
-          Thanks! Your enquiry opened in WhatsApp — press send there, or call {site.phoneDisplay}.
-        </p>
-      ) : null}
+      <p role="status" aria-live="polite" className="mt-4 text-sm leading-relaxed text-whatsapp">
+        {sent
+          ? `Thanks! Your enquiry opened in WhatsApp — press send there, or call ${site.phoneDisplay}.`
+          : ""}
+      </p>
+
     </form>
   );
 }
